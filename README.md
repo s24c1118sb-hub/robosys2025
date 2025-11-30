@@ -1,9 +1,14 @@
-# robosys2025　
+# robosys2025
 # 弧度法と度数法の変換
 標準入力から弧度法で表されたものを度数法に、度数法で表されたものを弧度法に変換して出力します。
+## インストール
+```
+$ git clone https://github.com/s24c1118sb-hub/robosys2025.git
+$ cd robosys2025
+$ chmod +x convert
+```
 ## 使い方
-まず、convertファイルをコピーしてください。
-そしたら、数値と単位（"degree"または"rad"）を半角スペースで区切って標準入力に渡してください。
+数値と単位("degree"または"rad")を半角スペースで区切って標準入力に渡してください。
 ### 例1：度数法を弧度法へ変換
 ```
 $ echo 90 degree | ./convert
