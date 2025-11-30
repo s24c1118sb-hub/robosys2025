@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -xv
+# SPDX-FileCopyrightText: 2025 Ryota Miyauchi
 
 ng(){
 	echo ${1}行目が違うよ
@@ -6,16 +7,17 @@ ng(){
 }
 
 res=0
-a=宮内は天才
-[ "$a" = 宮内は天才 ] || ng "$LINENO"
-[ "$a" = 宮内は天才ではない ] || ng "$LINENO"
 
-exit $es
+out=$(seq 5 | ./plus)
+[ "${out}" = 15.0] || ng "$LINENO"
 
-ng 123
+out=$(echo あ | ./ plus)
+[ "$?" = 1 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
-a="宮内は天才"
-[ "$a" = "宮内は天才" ]
-echo $?
-[ "$a" = "宮内は天才ではない" ]
-echo $?
+out=$(echo | ./plus)
+[ "$?" = 1 ] || ng "LINENO"
+[ "$?{out}" = "" ] || ng "$LINENO"
+
+[ "$res" = 0 ] && echo OK
+exit $res

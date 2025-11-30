@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Ryota Mitauchi
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import math
+
+def convert_line(line):
+    line = line.strip()
+    parts = line.split()
+
+    if not parts:
+        return
+
+    try:
+        val = float(parts[0])
+
+        if len(parts) < 2:
+            raise ValueEroor("Unit missing")
+
+        unit = parts[1].lower()
+
+        if unit == "degree":
+            rad = math.radians(val)
+            print(f"{rad}")
+
+
+        elif unit == "rad":
+            deg = math.degrees(val)
+            print(f"{deg}")
+
+        else:
+            raise ValueError("Unknown unit")
+
+    except Exception as e:
+        sys.stderr.write(f"Error:{e}\n")
+        sys.exit(1)
+
+for line in sys.stdin:
+    convert_line(line)
