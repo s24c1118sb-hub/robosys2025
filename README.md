@@ -20,7 +20,9 @@ $ echo 3.14 rad | ./convert
 179.9087476710785
 ```
 
-## テスト(https://github.com/s24c1118sb-hub/robosys2025/actions)
+## テスト結果
+[test](https://github.com/s24c1118sb-hub/robosys2025/actions)
+
 
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 
