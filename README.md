@@ -1,9 +1,8 @@
 # robosys2025
 
-# テスト結果
 ![test](https://github.com/s24c1118sb-hub/robosys2025/actions/workflows/test.yml/badge.svg)
 
-# 弧度法と度数法の変換
+## 弧度法と度数法の変換
 標準入力から弧度法で表されたものを度数法に、度数法で表されたものを弧度法に変換して出力します。
 ## インストール
 ```
